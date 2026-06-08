@@ -8,7 +8,7 @@ Screenshots. 20 is the minimum per level. Don't exceed 40.
 	- [ ] **Episode 1: Knee-Deep in the Dead**
 		- [X] **E1M1** (21/20, no need for more imo)
 		- [X] **E1M2** (26/20, no need for more imo)
-		- [ ] **E1M3** (lacking 20+ screenshots)
+		- [X] **E1M3** (36/20, no need for even more imo)
 		- [ ] **E1M4** (lacking 20+ screenshots)
 		- [ ] **E1M5** (lacking 20+ screenshots)
 		- [ ] **E1M6** (lacking 20+ screenshots)
@@ -241,7 +241,7 @@ Ranking, evaluating and adding to database.
 	- [ ] **Episode 1: Knee-Deep in the Dead**
 		- [X] **E1M1** (21/21 screenshots processed)
 		- [X] **E1M2** (26/26 screenshots processed)
-		- [ ] **E1M3** (lacking 20+ screenshots)
+		- [ ] **E1M3** (36/36 screenshots added to DB, 0/36 screenshots with difficulty set-up)
 		- [ ] **E1M4** (lacking 20+ screenshots)
 		- [ ] **E1M5** (lacking 20+ screenshots)
 		- [ ] **E1M6** (lacking 20+ screenshots)
