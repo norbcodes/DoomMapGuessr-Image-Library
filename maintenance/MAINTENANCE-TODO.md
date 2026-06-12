@@ -1,0 +1,11 @@
+# Maintenance Kit v3 Utilities
+- [ ] Add Images to Database
+  - [ ] Classic DOOM
+  - [ ] DOOM 64
+- [ ] Bulk Difficulty Editor
+- [ ] Image Validator _(checks whether all database images exist as files AND database images point to valid sources)_
+- [ ] Verify Coordinate Issues _(checks for images with similar coordinates in the same map AND also for images with impossible coordinates, such as out-of-bounds)_
+- [ ] Statistics _(shows basic and advanced database statistics)_
+- [ ] Bulk Edit _(edits a field for multiple games/episodes/maps/images)_
+
+Those are all for now :)
