@@ -1,25 +1,28 @@
 # Global TODO for DoomMapGuessr-Image-Library
 The global TODO for DoomMapGuessr's Image Library (and DoomMapGuessr too).
 
+> [!NOTE]
+> We will be moving this TODO to separate GitHub Issues for simplicity.
+
 ## Anyone can contribute
 Screenshots. 20 is the minimum per level. Don't exceed 40.
 
 - [ ] **The Ultimate Doom**
 	- [ ] **Episode 1: Knee-Deep in the Dead**
-		- [X] **E1M1** (21/20, no need for more imo)
-		- [X] **E1M2** (26/20, no need for more imo)
-		- [X] **E1M3** (36/20, no need for even more imo)
-		- [ ] **E1M4** (lacking 20+ screenshots)
-		- [ ] **E1M5** (lacking 20+ screenshots)
+		- [X] **E1M1** (21/20, no need for more imo but still open)
+		- [X] **E1M2** (26/20, no need for more imo but still open)
+		- [X] **E1M3** (36/20, closed)
+		- [X] **E1M4** (24/20, no need for more imo but still open)
+		- [X] **E1M5** (35/20, closed)
 		- [ ] **E1M6** (lacking 20+ screenshots)
 		- [ ] **E1M7** (lacking 20+ screenshots)
 		- [ ] **E1M8** (lacking 20+ screenshots)
 		- [ ] **E1M9** (lacking 20+ screenshots)
 	- [ ] **Episode 2: Shores of Hell**
-		- [X] **E2M1** (21/20, no need for more imo)
-		- [X] **E2M2** (25/20, if you really want to add more, go ahead, but maybe not necessary??)
-		- [X] **E2M3** (24/20, no need for more imo)
-		- [X] **E2M4** (25/20, no need for more imo)
+		- [X] **E2M1** (21/20, no need for more imo but still open)
+		- [X] **E2M2** (25/20, no need for more imo but still open)
+		- [X] **E2M3** (24/20, no need for more imo but still open)
+		- [X] **E2M4** (25/20, no need for more imo but still open)
 		- [ ] **E2M5** (lacking 20+ screenshots)
 		- [ ] **E2M6** (lacking 20+ screenshots)
 		- [ ] **E2M7** (lacking 20+ screenshots)
@@ -242,8 +245,8 @@ Ranking, evaluating and adding to database.
 		- [X] **E1M1** (21/21 screenshots processed)
 		- [X] **E1M2** (26/26 screenshots processed)
 		- [X] **E1M3** (36/36 screenshots processed)
-		- [ ] **E1M4** (lacking 20+ screenshots)
-		- [ ] **E1M5** (lacking 20+ screenshots)
+		- [ ] **E1M4** (24/24 screenshots added to database; 0/24 screenshots with difficulty level)
+		- [ ] **E1M5** (35/35 screenshots added to database; 0/35 screenshots with difficulty level)
 		- [ ] **E1M6** (lacking 20+ screenshots)
 		- [ ] **E1M7** (lacking 20+ screenshots)
 		- [ ] **E1M8** (lacking 20+ screenshots)
