@@ -53,10 +53,10 @@ from .generic import (
 
 def find_image_files_to_add(
     directory: Path, /, recursive_lookup: bool = False
-) -> list[tuple[Path, float, float, float, str]]:
+) -> list[tuple[Path, float, float, str]]:
     iterdir: Generator[Path, None, None] = directory.iterdir()
 
-    images: list[tuple[Path, float, float, float, str]] = []
+    images: list[tuple[Path, float, float, str]] = []
 
     for path in iterdir:
         if path.is_dir() and recursive_lookup:
@@ -78,19 +78,19 @@ def find_image_files_to_add(
 def add_images_to_database(
     connection: Connection,
     map_id: int,
-    images: list[tuple[Path, float, float, float, str]],
+    images: list[tuple[Path, float, float, str]],
 ) -> set[int]:
     connection.row_factory = Row
     cursor: Cursor = connection.cursor()
     errors: set[int] = set()
 
-    for index, (path, x, y, z, ext) in enumerate(images):
+    for index, (path, x, y, ext) in enumerate(images):
         cursor.execute(
             """
-            INSERT INTO Image (Source, X, Y, Z, MapId)
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO Image (Source, X, Y, MapId)
+            VALUES (?, ?, ?, ?)
             """,
-            ("Lorem Ipsum", x, y, z, map_id),
+            ("Lorem Ipsum", x, y, map_id),
         )
         image_id: int | None = cursor.lastrowid
 
