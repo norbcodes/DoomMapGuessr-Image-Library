@@ -76,7 +76,7 @@ def parse_coordinates_in_filename(s: str, /) -> tuple[float, float] | None:
             match_evaluated if match_to_be_ranked is None else match_to_be_ranked
         )
 
-        x, y = match.groups()
+        x, y, *_ = match.groups()
         return (float(x), float(y))
 
     return None

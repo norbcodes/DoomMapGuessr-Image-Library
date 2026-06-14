@@ -1,5 +1,5 @@
 """
-maintenance/utils/add-images-to-db.py _(Version 3)_
+maintenance/utils/add_images_to_db.py _(Version 3)_
 --------------------------------------------
 
 Author: Matthew
@@ -52,6 +52,24 @@ from .generic import (
 
 
 def find_image_files_to_add(
+    paths: list[Path],
+) -> list[tuple[Path, float, float, str]]:
+    images: list[tuple[Path, float, float, str]] = []
+
+    for path in paths:
+        if path.is_file() and (
+            re.match(TO_BE_RANKED_IMAGE_NAME_PATTERN, path.name)
+            or re.match(EVALUATED_IMAGE_NAME_PATTERN, path.name)
+        ):
+            coords = parse_coordinates_in_filename(path.name)
+
+            if coords is not None:
+                images.append((path, *coords, path.suffix))
+
+    return images
+
+
+def find_all_image_files_to_add(
     directory: Path, /, recursive_lookup: bool = False
 ) -> list[tuple[Path, float, float, str]]:
     iterdir: Generator[Path, None, None] = directory.iterdir()
@@ -60,7 +78,7 @@ def find_image_files_to_add(
 
     for path in iterdir:
         if path.is_dir() and recursive_lookup:
-            images += find_image_files_to_add(path, recursive_lookup=True)
+            images += find_all_image_files_to_add(path, recursive_lookup=True)
             continue
 
         if path.is_file() and (
@@ -99,6 +117,7 @@ def add_images_to_database(
 
         imagename: str = f"img{str(image_id).zfill(10)}{ext}"
         filename: Path = path.parent.resolve(strict=True) / imagename
+        path = path.rename(filename)
         github_rel_path: str | None = get_relative_github_path(path)
 
         if not github_rel_path:
@@ -112,8 +131,6 @@ def add_images_to_database(
             """,
             (github_url, image_id),
         )
-
-        path.rename(filename)
 
     connection.commit()
     return errors

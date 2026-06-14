@@ -44,10 +44,13 @@ import platform
 import re
 import sqlite3
 import subprocess
+from argparse import ArgumentParser
 from collections import defaultdict
 from pathlib import Path
 
 import requests
+from core import connection
+from utils import add_images_to_db as imgadd
 
 # [*] Constants
 CONFIG: str = ""
@@ -77,10 +80,62 @@ def get_full_difficulty_name(difficulty_level: int) -> str:
     return f"{DIFFICULTY_NAMES[difficulty_level - 1]} ({DIFFICULTY_ABBREVIATION[difficulty_level - 1]})"
 
 
-def get_pretty_header(header_text: str) -> str:
-    return header_text  # TODO: make this actually return a pretty header
-
-
 if __name__ == "__main__":
-    # TODO: run the actual entry point here
-    pass
+    parser = ArgumentParser("DoomMapGuessr MAPDAT4 [Maintenance Kit]")
+    subparsers = parser.add_subparsers(dest="command")
+
+    parser.add_argument("database", type=str, help="Path to the MAPDAT4 database file.")
+
+    add_command = subparsers.add_parser("add", help="Add images to MAPDAT4")
+    add_command.add_argument(
+        "sel",
+        type=str,
+        help="Selection of images to add: can be a single image path, a list of paths separated by '?' or '*' for all images.",
+    )
+    add_command.add_argument(
+        "mapid",
+        type=int,
+        help="ID of the map that matches the images to add.",
+    )
+    add_command.add_argument(
+        "--recursive",
+        action="store_true",
+        help="When using sel='*', this option allows for recursive lookup.",
+    )
+
+    args = parser.parse_args()
+
+    match args.command:
+        case "add":
+            images: list[tuple[Path, float, float, str]] = []
+
+            if args.sel == "*":
+                images = imgadd.find_all_image_files_to_add(Path.cwd(), args.recursive)
+
+            elif "?" in args.sel:
+                paths = [Path(i) for i in args.sel.split("?")]
+                images = imgadd.find_image_files_to_add(paths)
+
+            else:
+                images = imgadd.find_image_files_to_add([args.sel])
+
+            conn = connection.get_connection(args.database)
+
+            if not conn:
+                print("!! error: no connection (None)")
+                exit()
+
+            try:
+                errors = imgadd.add_images_to_database(conn, args.mapid, images)
+
+            except Exception as ex:
+                print(f"!! error: {ex} !!")
+
+            else:
+                print(errors)
+
+            finally:
+                conn.close()
+
+        case _:
+            pass

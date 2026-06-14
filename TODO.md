@@ -40,7 +40,7 @@ For the screenshots, the recommendation for minimum amount is 20, but some level
 		- [ ] **E3M5** (lacking 20+ screenshots)
 		- [ ] **E3M6** (lacking 20+ screenshots)
 		- [ ] **E3M7** (lacking 20+ screenshots)
-		- [ ] **E3M8** (lacking 20+ screenshots)
+		- [ ] **E3M8** (9/20 screenshots; lacking 11+)
 		- [ ] **E3M9** (lacking 20+ screenshots)
 	- [ ] **Episode 4: Thy Flesh Consumed**
 		- [ ] **E4M1** (lacking 20+ screenshots)
@@ -276,7 +276,7 @@ Ranking, evaluating and adding to database.
 		- [ ] **E3M5** (lacking 20+ screenshots)
 		- [ ] **E3M6** (lacking 20+ screenshots)
 		- [ ] **E3M7** (lacking 20+ screenshots)
-		- [ ] **E3M8** (lacking 20+ screenshots)
+		- [ ] **E3M8** (9/9 screenshots added to database; 0/9 screenshots to be ranked by difficulty)
 		- [ ] **E3M9** (lacking 20+ screenshots)
 	- [ ] **Episode 4: Thy Flesh Consumed**
 		- [ ] **E4M1** (lacking 20+ screenshots)
