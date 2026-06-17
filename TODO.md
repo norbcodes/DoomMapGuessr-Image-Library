@@ -28,7 +28,7 @@ For the screenshots, the recommendation for minimum amount is 20, but some level
 		- [X] **E2M3** (24/20 screenshots, no need for more imo but still **open**)
 		- [X] **E2M4** (25/20 screenshots, no need for more imo but still **open**)
 		- [ ] **E2M5** (28/20 TO BE EVALUATED AND RANKED; i probably got like 60% of the map that's how big it is)
-		- [ ] **E2M6** (lacking 20+ screenshots)
+		- [ ] **E2M6** (27/20 TO BE EVALUATED AND RANKED; probably no more needed)
 		- [ ] **E2M7** (lacking 20+ screenshots)
 		- [ ] **E2M8** (lacking 20+ screenshots)
 		- [ ] **E2M9** (5 / 20 TO BE EVALUATED AND RANKED map is too smol, only got 5)
